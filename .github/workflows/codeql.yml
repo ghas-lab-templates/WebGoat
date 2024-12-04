@@ -87,7 +87,7 @@ jobs:
         cache: 'maven'
 
     - if: matrix.build-mode == 'manual'  
-      run: mvn clean install
+      run: mvn clean install -DskipTests
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
